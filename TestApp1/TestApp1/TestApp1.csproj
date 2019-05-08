@@ -5,4 +5,10 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="env" />
+    <Exec Command="echo $PATH" />
+    <Exec Command="echo %PATH%" />
+  </Target>
+
 </Project>
